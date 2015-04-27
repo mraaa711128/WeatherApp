@@ -13,6 +13,8 @@
     <script type="text/javascript" src="js/angular/angular.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
 
+	<div class="navbar-wrapper">
+	<div class="container">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"  ng-include="'topbar.html'">
 <!--         <div class="container-fluid">
             <div class="navbar-header">
@@ -26,10 +28,12 @@
             </div>
         </div> -->
     </nav>
+    </div>
+	</div>
 
 	<div class="container-fluid" style="padding-top: 20px;">	
 		<div class="row">
-			<div class="col-xs-12 col-md-6 col-md-offset-3">
+			<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
 				<div class="input-group">
 					<input type="text" class="form-control" placeholder="Search weather for location or zipcode ...">
 					<span class="input-group-btn">
@@ -42,16 +46,16 @@
 
 	<div class="container-fluid" style="padding-top: 20px;">
 		<div class="row">
-			<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+			<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
 				<nav class="navbar" role="navigation">
 					<div class="container-fluid">
 						<div class="navbar-header">
 <!-- 							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls= "navbar">
 			                    Date Select
 			                </button> -->
-			                <div class="col-xs-12 navbar-toggle collapsed">
-			                <a class="btn btn-link" href="#" data-toggle="collapse" data-target=".date-menu">04/19</a>
-			                </div>
+			                <!-- <div class="navbar-toggle collapsed"> -->
+			                <a class="btn btn-link navbar-toggle collapsed" href="#" data-toggle="collapse" data-target=".date-menu">Date Selection</a>
+			                <!-- </div> -->
 			            </div>
 			            <div id="navbar" class="navbar-collapse collapse date-menu">
 							<ul class="nav nav-tabs nav-justified">
@@ -69,11 +73,11 @@
 				<div class="panel">
 					<!-- <div class="panel-body"> -->
 						<div class="row" style="padding-bottom: 20px;">
-							<div class="col-xs-12 col-sm-5" style="vertical-align: middle;">
-								<img data-src="holder.js/300x300" class="img-rounded img-responsive" alt="300x300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgdmlld0JveD0iMCAwIDE0MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjQ0LjA0Njg3NSIgeT0iNzAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MTBwdDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xNDB4MTQwPC90ZXh0PjwvZz48L3N2Zz4=" data-holder-rendered="true" style="width: 100%;">
+							<div class="col-xs-12 col-sm-5">
+								<img data-src="holder.js/300x300" class="img-rounded img-responsive center-block" alt="300x300" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgdmlld0JveD0iMCAwIDE0MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjQ0LjA0Njg3NSIgeT0iNzAiIHN0eWxlPSJmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MTBwdDtkb21pbmFudC1iYXNlbGluZTpjZW50cmFsIj4xNDB4MTQwPC90ZXh0PjwvZz48L3N2Zz4=" data-holder-rendered="true" style="width: 100%; max-width: 300px; padding-bottom: 20px;">
 							</div>
-							<div class="col-xs-12 col-sm-7" style="padding-top: 20px;">
-								<div class="row" style="text-align: center;">
+							<div class="col-xs-12 col-sm-7" style="padding-top: 0px;">
+								<div class="row featurette" style="text-align: center;">
 									<div class="col-xs-12 col-sm-4">
 											<p>cur: <span style="font-size: 36px;">74</span></p>
 <!-- 										<div class="col-xs-3"><h5 class="current-degree-header">cur:</h5></div>
