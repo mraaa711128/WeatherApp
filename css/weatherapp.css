@@ -24,3 +24,10 @@ body {
 	text-align: center;
 	font-size: x-large;
 }
+
+.no-wrap-heading {
+	font-size: 28px;
+ 	white-space: nowrap;
+  	overflow: hidden;
+	text-overflow: ellipsis;
+}
