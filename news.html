@@ -9,8 +9,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.js" type="text/javascript"></script>
 </head>
-<body>
-    <script type="text/javascript" src="js/angular/angular.min.js"></script>
+<body ng-controller="newsController" ng-init="getNews()">
+    <script type="text/javascript" src="js/angular.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
 
 	<div class="navbar-wrapper">
@@ -40,31 +40,12 @@
     </div>
 
     <div class="container">
-        <div class="col-xs-12 col-sm-6 col-lg-4">
-          <p><h2 class="no-wrap-heading">HeadingHeadingHeadingHeading</h2> - Apr. 29, 2015 20:19:35</p>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+        <div class="col-xs-12 col-sm-6 col-lg-6" ng-repeat="story in stories">
+          <p><h3>{{story.title}} <small> - {{story.pubDate}} </small></h3></p>
+          <p>{{story.description}} </p>
+          <p><a class="btn btn-default" href="{{story.link}}" target="_blank"  role="button">View details</a></p>
         </div>
-        <div class="col-xs-12 col-sm-6 col-lg-4">
-          <p><h2 class="no-wrap-heading">HeadingHeadingHeadingHeading</h2> - Apr. 29, 2015 20:19:35</p>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-4">
-          <p><h2 class="no-wrap-heading">HeadingHeadingHeadingHeading</h2> - Apr. 29, 2015 20:19:35</p>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-4">
-          <p><h2 class="no-wrap-heading">HeadingHeadingHeadingHeading</h2> - Apr. 29, 2015 20:19:35</p>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-4">
-          <p><h2 class="no-wrap-heading">HeadingHeadingHeadingHeading</h2> - Apr. 29, 2015 20:19:35</p>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-        </div>
+       
     </div>
 </body>
 </html>
