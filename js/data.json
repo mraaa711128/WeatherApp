@@ -1,0 +1,18 @@
+{
+"coord":{"lon":-71.06,"lat":42.36},
+"sys":{"message":0.0151,"country":"US",
+		"sunrise":1430214167,"sunset":1430264433},
+"weather":[{"id":800,"main":"Clear",
+		"description":"Sky is Clear","icon":"01d"}],
+"base":"stations",
+"main":{"temp":10.108,"temp_min":10.108,
+		temp_max":10.108,"pressure":1017.5,
+		"sea_level":1019.23,"grnd_level":1017.5,
+		"humidity":64},
+"wind":{"speed":2.68,"deg":355.5},
+"clouds":{"all":0},
+"dt":1430247063,
+"id":4930956,
+"name":"Boston",
+"cod":200
+}
