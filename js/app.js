@@ -9,6 +9,9 @@ function weatherController($scope, $http) {
 	$scope.dayweathers = [];
 	$scope.selTab = 0;
 	var today = new Date();
+	today.setHours(0);
+	today.setMinutes(0);
+	today.setSeconds(0);
 	// var nextDate = new Date(today);
 	$scope.date.push(today);
 	// list of dates from current date +6 
@@ -59,7 +62,8 @@ function weatherController($scope, $http) {
         $scope.description = $scope.dayweathers.list[tabIndex].weather[0].description;
 		// $scope.image = 'http://openweathermap.org/img/w/' + $scope.dayweathers.list[tabIndex].weather[0].icon + '.png';
 		$scope.image = 'icons/' + $scope.dayweathers.list[tabIndex].weather[0].icon + '.png';
-
+		$scope.cityname = $scope.dayweathers.city.name;
+		
 		$scope.hrweathers = [];
 
 		var url = 'http://api.openweathermap.org/data/2.5/forecast';
@@ -74,6 +78,7 @@ function weatherController($scope, $http) {
 			callback : 'JSON_CALLBACK',
 		}}).success(function(data, status, headers, config) {
 			var alist = data.list;
+			console.log(alist);
 			var today = new Date($scope.date[tabIndex]);		
 			for (var i = 0; i < alist.length; i++) {
 				var listdate = new Date(data.list[i].dt * 1000);
